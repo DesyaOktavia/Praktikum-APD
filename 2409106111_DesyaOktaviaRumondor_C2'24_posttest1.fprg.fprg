@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="flowchart merkmobil"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-08 10:22:39 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtMVFFQjJTOUM7MjAyNC0wOS0wODswOTozNzo0OSBQTTsyNjQ4"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtMVFFQjJTOUM7MjAyNC0wOS0wODsxMDoyMjozOSBQTTsxOzI3NDE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="merkmobil" type="String" array="False" size=""/>
+            <declare name="hargadiskon, hargasetelahdiskon" type="Real" array="False" size=""/>
+            <input variable="merkmobil"/>
+            <if expression="merkmobil == &quot;tesla&quot;">
+                <then>
+                    <assign variable="hargadiskon" expression="300000000*0.017"/>
+                    <assign variable="hargasetelahdiskon" expression="300000000-51000000"/>
+                    <output expression="hargadiskon" newline="True"/>
+                    <output expression="hargasetelahdiskon" newline="True"/>
+                </then>
+                <else>
+                    <if expression="merkmobil == &quot;toyota&quot;">
+                        <then>
+                            <assign variable="hargadiskon" expression="300000000*0.021"/>
+                            <assign variable="hargasetelahdiskon" expression="300000000-63000000"/>
+                            <output expression="hargadiskon" newline="True"/>
+                            <output expression="hargasetelahdiskon" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="merkmobil == &quot;hyundai&quot;">
+                                <then>
+                                    <assign variable="hargadiskon" expression="300000000*0.023"/>
+                                    <assign variable="hargasetelahdiskon" expression="300000000-69000000"/>
+                                    <output expression="hargadiskon" newline="True"/>
+                                    <output expression="hargasetelahdiskon" newline="True"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
