@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value="2409106111_desyaoktaviarumondor_C2'24_posttest2"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-17 03:47:13 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtMVFFQjJTOUM7MjAyNC0wOS0xNzswMzowMjowMyBQTTsyNjI0"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtMVFFQjJTOUM7MjAyNC0wOS0xNzswMzo0NzoxMyBQTTsxOzI3NDI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nama, nim" type="String" array="False" size=""/>
+            <declare name="hargamerkmobil" type="Integer" array="False" size=""/>
+            <declare name="hargadiskonmerkmobiltesla, hargadiskonmerkmobiltoyota, hargadiskonmerkmobilhyundai" type="Real" array="False" size=""/>
+            <declare name="diskonmerkmobiltesla, diskonmerkmobiltoyota, diskonmerkmobilhyundai" type="Real" array="False" size=""/>
+            <declare name="modulus" type="Integer" array="False" size=""/>
+            <input variable="nama"/>
+            <input variable="nim"/>
+            <input variable="hargamerkmobil"/>
+            <assign variable="hargamerkmobil" expression="750000000"/>
+            <assign variable="diskonmerkmobiltesla" expression="0.17"/>
+            <assign variable="diskonmerkmobiltoyota" expression="0.21"/>
+            <assign variable="diskonmerkmobilhyundai" expression="0.23"/>
+            <assign variable="modulus" expression="hargamerkmobil/7"/>
+            <assign variable="hargadiskonmerkmobiltesla" expression="hargamerkmobil-(hargamerkmobil*0.17)"/>
+            <assign variable="hargadiskonmerkmobiltoyota" expression="hargamerkmobil-(hargamerkmobil*0.21)"/>
+            <assign variable="hargadiskonmerkmobilhyundai" expression="hargamerkmobil-(hargamerkmobil*0.23)"/>
+            <output expression="nama" newline="True"/>
+            <output expression="nim" newline="True"/>
+            <output expression="hargadiskonmerkmobiltesla" newline="True"/>
+            <output expression="hargadiskonmerkmobiltoyota" newline="True"/>
+            <output expression="hargadiskonmerkmobilhyundai" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
