@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2409106111_DesyaOktaviaRumondor_POSTTEST3"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-22 07:43:48 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtMVFFQjJTOUM7MjAyNC0wOS0yMTswOTo0OToyMSBQTTsyNjM2"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtMVFFQjJTOUM7MjAyNC0wOS0yMjswNzo0Mzo0OCBQTTs0OzI3NDk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nama, nim" type="String" array="False" size=""/>
+            <declare name="merkmobil" type="String" array="False" size=""/>
+            <declare name="hargaSetiapMerkMobil" type="Integer" array="False" size=""/>
+            <declare name="hargaDiskonMerkTesla, hargaDiskonMerkToyota, hargaDiskonMerkHyundai" type="Real" array="False" size=""/>
+            <declare name="hargaSetelahDiskonMerkTesla, hargaSetelahDiskonMerkToyota, hargaSetelahDiskonMerkHyundai" type="Real" array="False" size=""/>
+            <declare name="tidakJadiDibeli" type="String" array="False" size=""/>
+            <input variable="nama"/>
+            <input variable="nim"/>
+            <input variable="merkmobil"/>
+            <input variable="hargaSetiapMerkMobil"/>
+            <if expression="merkMobil==&quot;Tesla&quot;">
+                <then>
+                    <assign variable="hargaDiskonMerkTesla" expression="hargaSetiapMerkMobil*0.17"/>
+                    <assign variable="hargaSetelahDiskonMerkTesla" expression="hargaSetiapMerkMobil-(hargaSetiapMerkMobil*0.17)"/>
+                    <output expression="hargaSetelahDiskonMerkTesla" newline="True"/>
+                </then>
+                <else>
+                    <if expression="merkMobil==&quot;Toyota&quot;">
+                        <then>
+                            <assign variable="hargaDiskonMerkToyota" expression="hargaSetiapMerkMobil*0.21"/>
+                            <assign variable="hargaSetelahDiskonMerkToyota" expression="hargaSetiapMerkMobil-(hargaSetiapMerkMobil*0.21)"/>
+                            <output expression="hargaDiskonMerkToyota" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="merkMobil==&quot;Hyundai&quot;">
+                                <then>
+                                    <assign variable="hargaDiskonMerkHyundai" expression="hargaSetiapMerkMobil*0.23"/>
+                                    <assign variable="hargaSetelahDiskonMerkHyundai" expression="hargaSetiapMerkMobil-(hargaSetiapMerkMobil*0.21)"/>
+                                    <output expression="hargaDiskonMerkHyundai" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Tidak Jadi Dibeli&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
